@@ -10,9 +10,12 @@ public class WritterResults {
 	public WritterResults(ArrayList<String> outputs, File output, long time) {
 		System.out.println("WriterResult begins, number of datas : "+outputs.size());
 		FileWriter writer = null;
+		if (output.exists()) {
+			output.delete();
+		}
 		try {
 			writer = new FileWriter(output);
-			writer.write("duration of treatment of these datas :"+Long.toString(time)+" ms\n");
+			writer.write("Duration of treatment of these datas : "+Long.toString(time)+" ms\n");
 
 			for (String arg : outputs) {
 				writer.write(arg +"\n");

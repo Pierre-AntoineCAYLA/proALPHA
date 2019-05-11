@@ -29,7 +29,7 @@ public class ReaderThread implements Runnable{
 			}
 			br.close();
 		} catch (Exception e) {
-			System.out.println("an error occured"+e);
+			System.out.println("an error occured "+e);
 		}
 		for(int i=0;i<App.nbThread;i++) {
 			records.add(App.POISONING);

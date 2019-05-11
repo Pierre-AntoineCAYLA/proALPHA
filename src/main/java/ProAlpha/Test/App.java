@@ -32,7 +32,6 @@ public class App {
 		}
 		debut=System.currentTimeMillis();
 		ThreadUtils.execute(testThreads);
-		System.out.println(outputs.size());
 		Collections.sort(outputs,new Comparator<String>() {
 		    public  int compare(String s1, String s2) {
 		          return s2.compareTo(s1);
